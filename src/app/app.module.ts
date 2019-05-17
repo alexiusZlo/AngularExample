@@ -9,7 +9,7 @@ import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,6 +19,9 @@ import {RouterModule} from '@angular/router';
     AppRoutingModule,
   ],
   providers: [AppRoutingModule],
+  exports: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
