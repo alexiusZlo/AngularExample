@@ -16,31 +16,20 @@
   </div>
 </div>
 
-<!--<section class="mailbox">-->
-<!--  <header class="mailbox-header">-->
-<!--    <h1>MailBox</h1>-->
-<!--  </header>-->
 
-<!--  <main class="mailbox-body">-->
-<!--    <div class="mailbox-letters">-->
-<!--      <app-letter-->
-<!--        *ngFor="let data of letters; let i = index;"-->
-<!--        [index]="i"-->
-<!--        [data]="data"-->
-<!--        (delete)="deleteLetter($event)"-->
-<!--      ></app-letter>-->
-<!--    </div>-->
-<!--  </main>-->
-<!--</section>-->
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <section class="mailBox">
+      <header class="mailBox-header">
+        <h1>Mil Box</h1>
+      </header>
 
-<section class="mailBox">
-  <header class="mailBox-header">
-    <h1>Mil Box</h1>
-  </header>
+      <main class="mailBox-body">
+        <div class="mailBox-letters">
+          <app-letter *ngFor="let item of massages" [data]="item" (remove)="removeMessage($event)"></app-letter>
+        </div>
+      </main>
+    </section>
+  </div>
+</div>
 
-  <main class="mailBox-body">
-    <div class="mailBox-letters">
-      <app-letter *ngFor="let item of massages" [data]="item" (remove)="removeMessage($event)"></app-letter>
-    </div>
-  </main>
-</section>

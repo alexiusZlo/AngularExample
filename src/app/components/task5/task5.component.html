@@ -1,7 +1,20 @@
-<form [formGroup]>
-  <input formControlName="name">
-  <input formControlName="surname">
-  <input formControlName="gender">
-  <input formControlName="birthday">
-  <input formControlName="email">
+<form class="text-center border border-light p-5" [formGroup]="fullFormcontrol">
+  <p class="h4 mb-4">Contact us</p>
+  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name" formControlName="name">
+  <input type="text" id="defaultContactFormSurname" class="form-control mb-4" placeholder="surname"
+         formControlName="surname">
+  <select class="browser-default custom-select mb-4">
+    <option value="" disabled selected>Choose gender</option>
+    <option value="2">Man</option>
+    <option value="3">Woman</option>
+    <option value="4" disabled>It</option>
+  </select>
+  <input type="data" id="defaultContactFormBirthday" class="form-control mb-4" placeholder="Name"
+         formControlName="birthday">
+  <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+  <!-- Send button -->
+  <button class="btn btn-info btn-block" type="submit">Send</button>
+
 </form>
+<!-- Default form contact -->
