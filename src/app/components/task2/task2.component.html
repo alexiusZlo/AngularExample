@@ -1,3 +1,46 @@
-<p>
-  task2 works!
-</p>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-7">
+      <mdb-card-title>
+        <ul class="list-group">
+          <li class="list-group-item"><h2>Приложение "Почтовый ящик"</h2></li>
+          <li class="list-group-item">- Сделать статический компонент mailBox</li>
+          <li class="list-group-item">- Внутри компонента mailBox вывести список писем</li>
+          <li class="list-group-item">- Для каждого письма выводить время получения</li>
+          <li class="list-group-item">- Каждые 3-5 секунд добавлять 1-2 новых письма в список</li>
+          <li class="list-group-item">- Реализовать возможность удаления письма из списка</li>
+          <li class="list-group-item">- При удалении выводить "время жизни" компонента письма в консоль</li>
+        </ul>
+      </mdb-card-title>
+    </div>
+  </div>
+</div>
+
+<!--<section class="mailbox">-->
+<!--  <header class="mailbox-header">-->
+<!--    <h1>MailBox</h1>-->
+<!--  </header>-->
+
+<!--  <main class="mailbox-body">-->
+<!--    <div class="mailbox-letters">-->
+<!--      <app-letter-->
+<!--        *ngFor="let data of letters; let i = index;"-->
+<!--        [index]="i"-->
+<!--        [data]="data"-->
+<!--        (delete)="deleteLetter($event)"-->
+<!--      ></app-letter>-->
+<!--    </div>-->
+<!--  </main>-->
+<!--</section>-->
+
+<section class="mailBox">
+  <header class="mailBox-header">
+    <h1>Mil Box</h1>
+  </header>
+
+  <main class="mailBox-body">
+    <div class="mailBox-letters">
+      <app-letter *ngFor="let item of massages" [data]="item" (remove)="removeMessage($event)"></app-letter>
+    </div>
+  </main>
+</section>

@@ -1,0 +1,23 @@
+
+<!--<div id="index-{{index}}" class="letter">-->
+<!--  <div class="letter-meta">-->
+<!--    <div class="letter-meta__received">{{data.received}}</div>-->
+<!--    <div class="letter-meta__title">{{data.title}}</div>-->
+<!--  </div>-->
+
+<!--  <div class="letter-control">-->
+<!--    <button class="letter-control__delete" (click)="deleteLetter()">x</button>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<div class="message">
+  <div class="message__time">{{parseMessageTime(data.time)}}</div>
+  <div class="message__from">{{data.from}}</div>
+  <div class="message__title">{{data.title}}</div>
+  <div class="message__body">{{data.body}}</div>
+  <div class="message__button">
+    <button type="button" (click)="onRemove()">delete</button>
+  </div>
+</div>
+<hr class="divider">

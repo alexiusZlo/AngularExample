@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAU;EACR,UAAU,EAAE,6BAA6B;EACzC,aAAa,EAAE,6BAA6B",
+"sources": ["task2.component.scss"],
+"names": [],
+"file": "task2.component.css"
+}

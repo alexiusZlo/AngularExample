@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UsersT1Service} from '../../services/users-t1.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-task1',
@@ -14,8 +15,23 @@ export class Task1Component implements OnInit {
   constructor(public _usersService: UsersT1Service) {
   }
 
+  getRandom(list) {
+    const length = Object.keys(list).length;
+    const randomNum = Math.floor(Math.random() * length);
+    console.log(list[randomNum].download_url);
+    return this.userImg = list[randomNum].download_url;
+  }
+
+  getImg(target) {
+    target.src = this.userImg = this._usersService.getListImg().subscribe(list => {
+      this.getRandom(list);
+    });
+  }
+
   ngOnInit() {
     this._usersService.getAllUsers().subscribe(users => this.users = users);
-    console.log(this._usersService.getRandomImg());
+    this.userImg = this._usersService.getListImg().subscribe(list => {
+      this.getRandom(list);
+    });
   }
 }

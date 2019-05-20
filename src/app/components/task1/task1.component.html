@@ -21,13 +21,14 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-4 pt-3" *ngFor="let user of users">
+    <div class="col-4 pt-3" *ngFor="let user of users; let i = index">
       <!-- Card -->
       <mdb-card>
         <div class="view rgba-white-slight waves-light" mdbWavesEffect>
           <!-- Card img -->
-          <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-                        alt="Card image cap"></mdb-card-img>
+          <mdb-card-img src="{{userImg}}"
+                        alt="Card image cap" #targetImg
+          ></mdb-card-img>
           <a>
             <div class="mask"></div>
           </a>
@@ -48,7 +49,7 @@
             content.
           </mdb-card-text>
 
-          <a mdbBtn color="primary" mdbWavesEffect>Button</a>
+          <a mdbBtn color="primary" mdbWavesEffect (click)="getImg(targetImg)">Button</a>
         </mdb-card-body>
       </mdb-card>
       <!-- Card -->

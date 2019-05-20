@@ -19,9 +19,7 @@ import {RouterModule} from '@angular/router';
     AppRoutingModule,
   ],
   providers: [AppRoutingModule],
-  exports: [
-
-  ],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
