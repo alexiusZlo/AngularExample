@@ -3,7 +3,8 @@
     <div class="col-7">
       <h1>Карточки пользователей</h1>
       <ol>
-        <li>Сделать компонент "карточка пользователя" (UserCard) можно найти готовый html/css шаблон, например вот этот -
+        <li>Сделать компонент "карточка пользователя" (UserCard) можно найти готовый html/css шаблон, например вот этот
+          -
           https://codepen.io/littlesnippets/pen/mVqNjw?editors=1100
         </li>
         <li>Сделать копку на карточке и по ее нажатию менять свет фона карточки на случайный.
@@ -18,4 +19,40 @@
   </div>
 </div>
 
-<app-card-user></app-card-user>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4 pt-3" *ngFor="let user of users">
+      <!-- Card -->
+      <mdb-card>
+        <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+          <!-- Card img -->
+          <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                        alt="Card image cap"></mdb-card-img>
+          <a>
+            <div class="mask"></div>
+          </a>
+        </div>
+        <!--Card content-->
+        <mdb-card-body>
+          <!--Title-->
+          <mdb-card-title>
+            <ul class="list-group">
+              <li class="list-group-item"><h2>{{user.name}}</h2></li>
+              <li class="list-group-item">{{user.email}}</li>
+              <li class="list-group-item">{{user.phone  }}</li>
+            </ul>
+          </mdb-card-title>
+
+          <!--Text-->
+          <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </mdb-card-text>
+
+          <a mdbBtn color="primary" mdbWavesEffect>Button</a>
+        </mdb-card-body>
+      </mdb-card>
+      <!-- Card -->
+
+    </div>
+  </div>
+</div>
